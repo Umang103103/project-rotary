@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-        <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar p-0">
       <div class="container-fluid p-0 position-relative">
         <div class="card text-bg-dark mb-0">
@@ -62,19 +62,38 @@
           </div>
           <div class="offcanvas-body d-flex flex-column">
             <ul class="navbar-nav flex-column text-start">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="#" onclick="showSection('home')"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Service Project</a>
+                <a class="nav-link" href="#" onclick="showSection('about')"
+                  >About us</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Get Involve</a>
+                <a class="nav-link" href="#" onclick="showSection('programs')"
+                  >Our Programs</a
+                >
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">News</a></li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a
+                  class="nav-link"
+                  href="#"
+                  onclick="showSection('get-involved')"
+                  >Get Involve</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('news')"
+                  >News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('contact')"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </div>
@@ -85,7 +104,7 @@
     <!-- Home Section (Hero Image with Navbar and Carousel) -->
     <section id="home" class="active-section">
       <!-- Carousel below navbar and hero image -->
-      <div class="container mt-4">
+      <div class="container-fluid mt-4">
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -147,11 +166,91 @@
         </div>
       </div>
 
+      <!-- Our Programs Section on Home Page -->
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2>Our Programs</h2>
+            <p class="lead">
+              Rotary Club of Dhulikhel's programs are developing the next
+              generation of leaders, providing funding to make the world a
+              better place, and making peace a priority. And our programs are
+              not just for club members. Learn how you can make a difference in
+              your community through Rotary.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="./images/eye.jpg"
+                class="card-img-top"
+                alt="Rotary Rural Health Initiative"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Rotary Rural Health Initiative</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="./images/nose.jpg"
+                class="card-img-top"
+                alt="Nepal Community School Project"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nepal Community School Project</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img
+                src="./images/news.jpg"
+                class="card-img-top"
+                alt="Nepal Drinking Water Project"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Nepal Drinking Water Project</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12 text-center"></div>
+        </div>
+      </div>
+    </section>
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      function showSection(sectionId) {
+        document.querySelectorAll("section").forEach((section) => {
+          section.classList.add("d-none");
+        });
+
+        document.getElementById(sectionId).classList.remove("d-none");
+
+        const offcanvas = bootstrap.Offcanvas.getInstance(
+          document.getElementById("offcanvasNavbar")
+        );
+        if (offcanvas) {
+          offcanvas.hide();
+        }
+      }
+    </script>
   </body>
 </html>
