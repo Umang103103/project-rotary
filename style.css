@@ -62,9 +62,9 @@
 /* Close Button Spacing & Style */
 .offcanvas-fullscreen .btn-close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background-color: #ffffff;
+  top: 1rem;
+  right: 1rem;
+  background-color: #388892;
   border-radius: 50%;
   opacity: 1;
   width: 2rem;
@@ -93,4 +93,45 @@
     top: 1rem;
     right: 1rem;
   }
+}
+
+/* Menu Button Overlay */
+.menu-btn {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 10;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 1.4rem; /* smaller text on mobile */
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-title {
+    font-size: 2rem;
+    padding-top: 10rem;
+  }
+}
+/* Offcanvas styling */
+
+.offcanvas-fullscreen .btn-close {
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
