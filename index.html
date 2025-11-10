@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Webpage</title>
+    <title>Rotary Club of Dhulikhel</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -22,27 +22,30 @@
     <!--custom styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top p-0">
+        <!-- Navbar -->
+    <nav class="navbar p-0">
       <div class="container-fluid p-0 position-relative">
-        <div class="card text-bg-dark">
-          <img src="./images/1st.jpg" class="card-img" alt="hero-img" />
-          <div class="card-img-overlay">
-            <h1 class="card-title">Rotary Club of Dhulikhel</h1>
+        <div class="card text-bg-dark mb-0">
+          <img src="./images/1st.jpg" class="card-img w-100" alt="hero-img" />
+          <div
+            class="card-img-overlay d-flex align-items-center justify-content-center"
+          >
+            <h1 class="card-title text-white mb-0">Rotary Club of Dhulikhel</h1>
+
+            <button
+              class="navbar-toggler menu-btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
-        <button
-          class="navbar-toggler menu-btn"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
         <div
           class="offcanvas offcanvas-end offcanvas-fullscreen"
           tabindex="-1"
@@ -78,6 +81,71 @@
         </div>
       </div>
     </nav>
+
+    <!-- Home Section (Hero Image with Navbar and Carousel) -->
+    <section id="home" class="active-section">
+      <!-- Carousel below navbar and hero image -->
+      <div class="container mt-4">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/2.jpg" class="d-block w-100" alt="Slide 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/4.jpg" class="d-block w-100" alt="Slide 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="./images/5.jpg" class="d-block w-100" alt="Slide 3" />
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
 
     <!-- Bootstrap JS -->
     <script

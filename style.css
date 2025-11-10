@@ -118,7 +118,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .card-title {
     font-size: 2rem;
-    padding-top: 10rem;
+    padding-top: -5rem;
   }
 }
 /* Offcanvas styling */
@@ -134,4 +134,61 @@
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
+}
+/* Hero image styling */
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Remove fixed navbar spacing */
+.container {
+  padding-top: 1rem;
+}
+
+/* Carousel image styling */
+.carousel-item img {
+  object-fit: cover;
+  height: 500px;
+}
+
+/* Navbar text and button alignment */
+.card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Position menu button in top right corner */
+.menu-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Responsive carousel adjustments */
+@media (max-width: 767px) {
+  .carousel-item img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-item img {
+    height: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-item img {
+    height: 500px;
+  }
 }
