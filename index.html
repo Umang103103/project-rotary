@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- Navbar with hero image -->
     <nav class="navbar p-0">
       <div class="container-fluid p-0 position-relative">
         <div class="card text-bg-dark mb-0">
@@ -74,7 +74,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" onclick="showSection('Services')"
-                  >Service Project</a
+                  >Service Projects</a
                 >
               </li>
               <li class="nav-item">
@@ -100,10 +100,11 @@
         </div>
       </div>
     </nav>
+
     <!-- Main Content Wrapper -->
     <div id="content">
       <!-- Home Section (Hero Image with Navbar and Carousel) -->
-      <section id="home" class="active-section">
+      <section id="home">
         <!-- Carousel below navbar and hero image -->
         <div class="container-fluid mt-4">
           <div
@@ -190,41 +191,48 @@
 
           <div class="row">
             <div class="col-md-4 mb-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img
-                  src="./images/eye.jpg"
-                  class="card-img-top"
-                  alt="Rotary Rural Health Initiative"
-                  style="height: 200px; object-fit: cover"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Rotary Rural Health Initiative</h5>
+              <div class="card h-100 border-0 program-card">
+                <div class="program-image-wrapper">
+                  <img
+                    src="./images/eye.jpg"
+                    class="card-img"
+                    alt="Rotary Rural Health Initiative"
+                  />
+                  <div class="program-overlay">
+                    <h5 class="program-title">
+                      Rotary Rural Health Initiative
+                    </h5>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img
-                  src="./images/nose.jpg"
-                  class="card-img-top"
-                  alt="Nepal Community School Project"
-                  style="height: 200px; object-fit: cover"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Nepal Community School Project</h5>
+              <div class="card h-100 border-0 program-card">
+                <div class="program-image-wrapper">
+                  <img
+                    src="./images/nose.jpg"
+                    class="card-img"
+                    alt="Nepal Community School Project"
+                  />
+                  <div class="program-overlay">
+                    <h5 class="program-title">
+                      Nepal Community School Project
+                    </h5>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100 border-0 shadow-sm">
-                <img
-                  src="./images/news.jpg"
-                  class="card-img-top"
-                  alt="Nepal Drinking Water Project"
-                  style="height: 200px; object-fit: cover"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Nepal Drinking Water Project</h5>
+              <div class="card h-100 border-0 program-card">
+                <div class="program-image-wrapper">
+                  <img
+                    src="./images/news.jpg"
+                    class="card-img"
+                    alt="Nepal Drinking Water Project"
+                  />
+                  <div class="program-overlay">
+                    <h5 class="program-title">Nepal Drinking Water Project</h5>
+                  </div>
                 </div>
               </div>
             </div>
@@ -408,6 +416,8 @@
         </div>
       </section>
     </div>
+    <!-- Close content div -->
+
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
       <div class="container">
